@@ -27,6 +27,8 @@ public class ConfLoader {
 
     private List<String> reports;
 
+    private String homeFolder;
+
     public ConfLoader(){
         loadHomeDirectory();
     }
@@ -36,7 +38,7 @@ public class ConfLoader {
      * reporting configuration.
      */
     public void loadHomeDirectory(){
-        String homeFolder = System.getProperty(ENV_HOME_FOLDER);
+        homeFolder = System.getProperty(ENV_HOME_FOLDER);
         if(homeFolder == null)
             throw new RuntimeException("The reports.home env variable should be specified at start up");
 
@@ -65,6 +67,14 @@ public class ConfLoader {
      */
     public List<String> getReports() {
         return reports;
+    }
+
+    /**
+     * Gets the home folder defined at start up.
+     * @return String with the home folder.
+     */
+    public String getHomeFolder(){
+        return homeFolder;
     }
 
 }
