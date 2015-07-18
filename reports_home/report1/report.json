@@ -2,7 +2,7 @@
   "name": "Report 1",
   "report_file": "report1.jasper",
   "params": {
-    "param1": "java.lang.String",
-    "param2": "java.lang.String"
+    "param1": "string",
+    "param2": "string"
   }
 }

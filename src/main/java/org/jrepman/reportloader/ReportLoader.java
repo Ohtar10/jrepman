@@ -2,6 +2,7 @@ package org.jrepman.reportloader;
 
 import org.jrepman.domain.ReportDefinition;
 import org.jrepman.enums.ReportDefinitionProperties;
+import org.jrepman.enums.ReportParamDataType;
 import org.springframework.boot.json.BasicJsonParser;
 import org.springframework.boot.json.JsonParser;
 import org.springframework.context.annotation.Scope;
@@ -48,21 +49,20 @@ public class ReportLoader {
         }
 
         ReportDefinition reportDefinition = new ReportDefinition();
-        Map<String, Class> params = new HashMap<>();
+        Map<String, ReportParamDataType> params = new HashMap<>();
         reportDefinition.setName(jsonMap.get(ReportDefinitionProperties.NAME.getName()).toString());
         reportDefinition.setReportFile(jsonMap.get(ReportDefinitionProperties.REPORT_FILE.getName()).toString());
+        reportDefinition.setReportPath(Paths.get(reportPath));
         reportDefinition.setParams(params);
 
         Map<String, String> rawParams = (Map<String, String>)jsonMap.get(ReportDefinitionProperties.PARAMS.getName());
 
-        try {
-            Set<Map.Entry<String, String>> entrySet = rawParams.entrySet();
-            for(Map.Entry<String, String> entry: entrySet){
-                params.put(entry.getKey(), Class.forName(entry.getValue()));
-            }
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException("Failed to load the params map for '"+reportDefinitionFile+"'");
+
+        Set<Map.Entry<String, String>> entrySet = rawParams.entrySet();
+        for(Map.Entry<String, String> entry: entrySet){
+            params.put(entry.getKey(), ReportParamDataType.fromKey(entry.getValue()));
         }
+
 
         return reportDefinition;
     }

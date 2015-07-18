@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>$pagetitle</title>
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6" align="center">
+            <h1>$pagetitle</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h3>The report '$report.name' has been queued</h3>
+			<h5>This report is now in process to be generated and after finishing it will be sent to:</h5>
+			<ul>
+				#foreach($email in $emails)
+					<li>$email</li>
+				#end
+			</ul>
+            <h5>The parameters were:</h5>
+            <table class="table table-stripped">
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Value</th>
+                </tr>
+				#foreach($entry in $reportvalues.entrySet())
+                    <tr>
+                        <td>$entry.key</td>
+                        <td>$report.params.get($entry.key).key</td>
+                        <td>$entry.value</td>
+                    </tr>
+				#end
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="/js/jquery/jquery.min.js"/>
+<script src="/js/bootstrap/bootstrap.min.js"/>
+</body>
+
+</html>

@@ -1,5 +1,8 @@
 package org.jrepman.domain;
 
+import org.jrepman.enums.ReportParamDataType;
+
+import java.nio.file.Path;
 import java.util.Map;
 
 /**
@@ -13,7 +16,8 @@ public class ReportDefinition {
 
     private String name;
     private String reportFile;
-    private Map<String, Class> params;
+    private Path reportPath;
+    private Map<String, ReportParamDataType> params;
 
     public String getName() {
         return name;
@@ -31,11 +35,19 @@ public class ReportDefinition {
         this.reportFile = reportFile;
     }
 
-    public Map<String, Class> getParams() {
+    public Map<String, ReportParamDataType> getParams() {
         return params;
     }
 
-    public void setParams(Map<String, Class> params) {
+    public void setParams(Map<String, ReportParamDataType> params) {
         this.params = params;
+    }
+
+    public Path getReportPath() {
+        return reportPath;
+    }
+
+    public void setReportPath(Path reportPath) {
+        this.reportPath = reportPath;
     }
 }

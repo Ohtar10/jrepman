@@ -1,0 +1,13 @@
+{
+  "name": "Report 2",
+  "report_file": "report2.jasper",
+  "params": {
+    "stringparam": "string",
+    "intparam": "integer",
+    "longparam": "integer",
+    "doubleparam": "double",
+    "dateparam": "date",
+    "datetimeparam": "date_time",
+    "collectionparam": "list"
+  }
+}

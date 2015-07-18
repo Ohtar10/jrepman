@@ -1,7 +1,6 @@
 package org.jrepman.reports;
 
 import net.sf.jasperreports.engine.*;
-import net.sf.jasperreports.engine.export.JRPdfExporter;
 import net.sf.jasperreports.engine.util.JRLoader;
 import org.jrepman.enums.ExportType;
 import org.springframework.context.annotation.Scope;
