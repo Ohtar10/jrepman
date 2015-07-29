@@ -21,6 +21,9 @@ import java.util.Set;
  *
  * Contains the logic necessary to load the
  * independent report configuration.
+ *
+ * @author Ohtar10 - Luis Eduardo Ferro Diez
+ *
  */
 @Component
 @Scope("singleton")

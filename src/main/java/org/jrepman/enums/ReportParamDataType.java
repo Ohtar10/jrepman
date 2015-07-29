@@ -3,6 +3,8 @@ package org.jrepman.enums;
 /**
  * Contains the class definition for all the possible param
  * types that jrepman reports can handle.
+ *
+ * @author Ohtar10 - Luis Eduardo Ferro Diez
  */
 public enum ReportParamDataType {
 

@@ -12,6 +12,8 @@ import java.util.Map;
  * Status Controller
  *
  * Status Page Controller
+ *
+ * @author Ohtar10 - Luis Eduardo Ferro Diez
  */
 @Controller
 public class StatusController {

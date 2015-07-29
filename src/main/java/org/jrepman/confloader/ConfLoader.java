@@ -16,6 +16,8 @@ import java.util.Map;
  * Contains the necessary logic to load
  * the report configurations from the
  * home folder specified program argument.
+ *
+ * @author Ohtar10 - Luis Eduardo Ferro Diez
  */
 @Component
 @Scope("singleton")

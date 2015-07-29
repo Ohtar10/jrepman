@@ -3,6 +3,8 @@ package org.jrepman.enums;
 /**
  * Enumerate the possible report types
  * that the application can handle.
+ *
+ * @author Ohtar10 - Luis Eduardo Ferro Diez
  */
 public enum ExportType {
     PDF("application/pdf", "pdf");

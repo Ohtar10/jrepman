@@ -10,6 +10,8 @@ import java.util.Map;
  * Report Exporter
  *
  * Main interface to export reports as requested
+ *
+ * @author Ohtar10 - Luis Eduardo Ferro Diez
  */
 public interface ReportExporter {
 

@@ -11,6 +11,8 @@ import java.util.Map;
  * POJO representing a report definition
  * according to what is placed on the json
  * configuration.
+ *
+ * @author Ohtar10 - Luis Eduardo Ferro Diez
  */
 public class ReportDefinition {
 

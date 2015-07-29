@@ -2,6 +2,8 @@ package org.jrepman.enums;
 
 /**
  * Report Definition Properties
+ *
+ * @author Ohtar10 - Luis Eduardo Ferro Diez
  */
 public enum ReportDefinitionProperties {
 

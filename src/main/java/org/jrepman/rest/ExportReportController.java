@@ -36,6 +36,8 @@ import java.util.Set;
  * This is the main class for report generation, from here
  * depending on the request, a series of decisions will be
  * taken in order to generate and deliver the report.
+ *
+ * @author Ohtar10 - Luis Eduardo Ferro Diez
  */
 @Controller
 public class ExportReportController {

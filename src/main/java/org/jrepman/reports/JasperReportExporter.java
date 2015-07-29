@@ -15,6 +15,7 @@ import java.util.Map;
  *
  * Jasper Report implementation to export reports.
  *
+ * @author Ohtar10 - Luis Eduardo Ferro Diez
  */
 @Component
 @Scope("singleton")

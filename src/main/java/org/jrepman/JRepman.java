@@ -7,6 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * JRepman.
  *
  * Main Spring Boot Application Class of this service.
+ *
+ * @author Ohtar10 - Luis Eduardo Ferro Diez
  */
 @SpringBootApplication
 public class JRepman {
